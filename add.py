@@ -1,11 +1,11 @@
-a=input('enter first number')
-b=input('enter second number')
-if (type(a)==int or float):
-	if (type(b)==int or float):
-		div=(float(a)/float(b))
-		print('div=',div)
+a=input('enter number a:')
+b=input('enter number b:')
+acopy=a.replace("."," ")
+bcopy=b.replace("."," ")
+if((a.isnumeric() or acopy.isnumeric()) and (b.isnumeric() or bcopy.isnumeric())):
+	print(float(a)/float(b))
 else:
-	print('error')
+	print("enter a numerical value")
 	
 	
 	
