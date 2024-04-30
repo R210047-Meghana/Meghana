@@ -1,3 +1,16 @@
+#sum of two numbers
+
+
+a=int(input("Enter a:"))
+b=int(input("Enter b:"))
+c=a+b
+print(c)
+
+
+
+#division of two numbers
+
+
 a=input('enter number a:')
 b=input('enter number b:')
 acopy=a.replace("."," ")
@@ -35,31 +48,24 @@ print('dot product of two vectors=',s)
 		
 #find the determinant of the matrix
 		
+import numpy as np
+n_array=np.array([[1,2,3],[4,7,6],[7,8,9]])
+print('numpy matrix is:')
+print(n_array)
+det=np.linalg.det(n_array)
+print('det of matrix:',int(det))
 		
 		
 		
-def dete(matrix):
-	if(len(matrix))==2 and len(matrix[0])==2:
-		return(matrix[0][0]*matrix[1][1])-(matrix[0][1]*matrix[1][0])
-	if(len(matrix)!=len(matrix[0])):
-		return 'the matrix must be square'
-	det=0
-	for j in range(len(matrix[0])):
-		cofactor=(-1)**j*matrix[0][j]
-		submatrix=[[matrix[i][k] for k in range(len(matrix[0])) if k!=j] for i in range(1,len(matrix))]
-		subdet=dete(submatrix)
-		det+=cofactor*subdet
-	return det
+#addition of matrices
 
-matrix=[[1,2,3],
-	[4,5,6],
-	[7,8,9]]
-det=dete(matrix)
-print('the determinant of the matrix is:',det)
-		
-		
-		
-		
-		
-		
 
+a=[[9,2,8],[4,5,6],[9,3,2]]
+b=[[1,2,3],[4,5,6],[7,8,9]]
+c=[[4,9,6],[2,4,0],[1,0,6]]
+d=[[0,0,0],[0,0,0],[0,0,0]]
+for i in range(len(a)):
+	for j in range(len(a[0])):
+		d[i][j]=a[i][j]+b[i][j]+c[i][j]
+for row in d:
+	print(row)
