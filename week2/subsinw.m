@@ -1,0 +1,10 @@
+f1=2;
+f2=4;
+t=0:0.01:3;
+x1=sin(2*pi*f1*t);
+x2=sin(2*pi*f2*t);
+x=x1-x2;
+plot(t,x);
+xlabel('Time');
+ylabel('Amplitude');
+title("subtraction of sine waves");
